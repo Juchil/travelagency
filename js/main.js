@@ -1,4 +1,3 @@
-// Можно добавить дополнительную функциональность
 document.addEventListener('DOMContentLoaded', function() {
     // Анимация при загрузке страницы
     const cards = document.querySelectorAll('.product-card');

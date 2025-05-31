@@ -130,13 +130,11 @@ footer ul li i {
     transform: rotate(15deg) scale(1.1);
 }
 
-/* Фикс для секции горящих туров */
 .container.py-5 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
 }
 
-/* Фикс для карточек товаров */
 .product-card {
     height: 100%;
     display: flex;
@@ -155,7 +153,6 @@ footer ul li i {
     flex-direction: column;
 }
 
-/* Фикс для секции отзывов */
 #reviews {
     padding-top: 3rem;
     padding-bottom: 3rem;
