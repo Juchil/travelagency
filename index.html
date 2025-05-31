@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристическое агентство "Глобус"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Логотип" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-umbrella-beach"></i> Туры
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-fire"></i> Горящие туры</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-map-marked-alt"></i> Экскурсионные туры</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sun"></i> Пляжный отдых</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="egypt.html"><i class="fas fa-landmark"></i> О Египте</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews"><i class="fas fa-comments"></i> Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts"><i class="fas fa-address-book"></i> Контакты</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-sign-in-alt"></i> Вход
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-phone-volume"></i> Заказать звонок
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Секция горящих туров -->
+    <section class="container py-5" style="margin-top: 20px;">
+        <h2 class="text-center mb-5">Горящие туры</h2>
+        <div class="row g-4">
+            <!-- Тур 1 -->
+            <div class="col-md-4">
+                <div class="card product-card h-100 d-flex flex-column">
+                    <img src="img/egypt.jpg" class="card-img-top" alt="Тур в Египет">
+                    <div class="card-body d-flex flex-column">
+                        <div>
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Горящий</span>
+                            <h5 class="card-title">Египет, Хургада</h5>
+                            <p class="card-text">Отель 5* с аквапарком. Все включено. Вылет 15.05.2023</p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-4">$599</span>
+                                <button class="btn btn-outline-primary">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тур 2 -->
+            <div class="col-md-4">
+                <div class="card product-card h-100 d-flex flex-column">
+                    <img src="img/turkey.jpg" class="card-img-top" alt="Тур в Турцию">
+                    <div class="card-body d-flex flex-column">
+                        <div>
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Горящий</span>
+                            <h5 class="card-title">Турция, Анталия</h5>
+                            <p class="card-text">Отель 4* на первой линии. Все включено. Вылет 18.05.2023</p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-4">$699</span>
+                                <button class="btn btn-outline-primary">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тур 3 -->
+            <div class="col-md-4">
+                <div class="card product-card h-100 d-flex flex-column">
+                    <img src="img/dubai.jpg" class="card-img-top" alt="Тур в ОАЭ">
+                    <div class="card-body d-flex flex-column">
+                        <div>
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Горящий</span>
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Новинка</span>
+                            <h5 class="card-title">ОАЭ, Дубай</h5>
+                            <p class="card-text">Отель 5* с видом на Бурдж Халифа. Завтраки. Вылет 20.05.2023</p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-4">$999</span>
+                                <button class="btn btn-outline-primary">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="container py-5 bg-light">
+        <h2 class="text-center mb-5">Наши направления</h2>
+        <div class="row g-3">
+            <div class="col-md-4 col-6">
+                <img src="img/1.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/1.jpg" alt="Египет">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="img/2.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/2.jpg" alt="Турция">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="img/3.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/3.jpg" alt="ОАЭ">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="img/4.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/4.jpg" alt="Тайланд">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="img/5.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/5.jpg" alt="Греция">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="img/6.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/6.jpg" alt="Испания">
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section class="container py-5">
+        <h2 class="text-center mb-5">Подобрать тур</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="destination" class="form-label">Направление</label>
+                            <select class="form-select" id="destination">
+                                <option selected>Выберите направление</option>
+                                <option>Египет</option>
+                                <option>Турция</option>
+                                <option>ОАЭ</option>
+                                <option>Тайланд</option>
+                                <option>Греция</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Ваши пожелания</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="agree" required>
+                                <label class="form-check-label" for="agree">
+                                    Я согласен на обработку персональных данных
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция отзывов -->
+    <section id="reviews" class="container py-5 bg-light" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <h2 class="text-center mb-5">Отзывы наших клиентов</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"Отличный отдых в Египте благодаря вашему агентству! Все было организовано на высшем уровне. Особенно понравился отель и экскурсия к пирамидам."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="Аватар">
+                            <div>
+                                <h6 class="mb-0">Марина Иванова</h6>
+                                <small class="text-muted">Май 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="card-text">"Путешествие в Турцию превзошло все ожидания. Спасибо за индивидуальный подход и помощь в выборе отеля. Обязательно обратимся еще!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" alt="Аватар">
+                            <div>
+                                <h6 class="mb-0">Алексей Петров</h6>
+                                <small class="text-muted">Апрель 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer id="contacts" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> г. Москва, ул. Туристическая, 15
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone-alt me-2"></i> +7 (495) 123-45-67
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> info@globus-tour.ru
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-clock me-2"></i> Пн-Пт: 10:00 - 20:00
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Мы в соцсетях</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-vk fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-telegram fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Подписаться на рассылку</h5>
+                    <p>Узнавайте первыми о горящих турах и акциях</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Ваш email">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-envelope-open-text"></i> Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Туристическое агентство "Глобус". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно галереи -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно входа -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Вход в личный кабинет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Войти</button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Нет аккаунта? <a href="#" class="text-primary">Зарегистрируйтесь</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const galleryModal = document.getElementById('galleryModal')
+        galleryModal.addEventListener('show.bs.modal', event => {
+            const img = event.relatedTarget
+            const imgSrc = img.getAttribute('data-bs-img')
+            const modalImage = galleryModal.querySelector('#modalImage')
+            modalImage.src = imgSrc
+        })
+    </script>
+</body>
+</html>

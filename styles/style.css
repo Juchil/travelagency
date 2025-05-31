@@ -1,0 +1,207 @@
+/* Основные стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Навигационная панель */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+/* Карточки товаров */
+.product-card .card-title {
+    font-weight: 600;
+}
+
+.product-card .card-text {
+    font-weight: 400;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Кнопки */
+.btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Формы */
+.form-label {
+    font-weight: 500;
+}
+
+/* Подвал */
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+footer ul li {
+    font-weight: 400;
+}
+
+/* Иконки в навигации */
+.navbar-nav .nav-link i {
+    margin-right: 5px;
+}
+
+/* Иконки в подвале */
+footer ul li i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Социальные иконки */
+.social-links a i {
+    transition: all 0.3s ease;
+}
+
+/* Карточки отзывов */
+.card-body .fa-star {
+    margin-right: 2px;
+}
+
+/* Форма обратной связи */
+.form-check-label {
+    font-weight: 400;
+}
+
+/* Модальные окна */
+.modal-title {
+    font-weight: 600;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Круглая подложка для логотипа */
+.navbar-brand {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(13, 110, 253, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.navbar-brand:hover::before {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand img {
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Фикс для секции горящих туров */
+.container.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Фикс для карточек товаров */
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.product-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Фикс для секции отзывов */
+#reviews {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#reviews .card {
+    height: 100%;
+}
+
+#reviews .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#reviews .card-text {
+    flex-grow: 1;
+}
+
+/* Галерея изображений */
+.img-thumbnail {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Стили для страницы о Египте */
+.hero-egypt {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/egypt-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    min-height: 400px;
+    margin-top: -56px;
+    padding-top: 56px;
+}
+
+.list-group-item {
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.fa-circle-small {
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
